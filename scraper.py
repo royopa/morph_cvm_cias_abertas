@@ -9,11 +9,6 @@ import scraperwiki
 
 
 def download_file(url, file_path):
-    file_path_csv = file_path
-    if os.path.exists(file_path) or os.path.exists(file_path_csv):
-        print('Arquivo já baixado anteriormente', file_path)
-        return False
-
     response = requests.get(url, stream=True)
     
     if response.status_code != 200:
