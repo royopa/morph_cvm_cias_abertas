@@ -5,6 +5,11 @@ from datetime import datetime
 import pandas as pd
 import shutil
 import requests
+
+# morph.io requires this db filename, but scraperwiki doesn't nicely
+# expose a way to alter this. So we'll fiddle our environment ourselves
+# before our pipeline modules load.
+os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
 import scraperwiki
 
 
@@ -42,13 +47,7 @@ def main():
 
 
 def download_arquivo():
-    url = 'http://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/inf_cadastral_cia_aberta.csv'
-
-    # morph.io requires this db filename, but scraperwiki doesn't nicely
-    # expose a way to alter this. So we'll fiddle our environment ourselves
-    # before our pipeline modules load.
-    os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
-
+    url = 'http://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv'
     file_name = url.split('/')[-1]
     file_path = os.path.join('downloads', file_name)
     # faz o download do arquivo na pasta       
