@@ -2,7 +2,7 @@
 
 Scraper de dados da CVM com os dados das CIAs abertas
 
-http://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/inf_cadastral_cia_aberta.csv
+http://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv
 
 ## Cias. Abertas: Informação Cadastral
 
