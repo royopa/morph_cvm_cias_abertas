@@ -9,6 +9,9 @@ __pycache__/
 
 # C extensions
 *.so
+data.sqlite
+scraperwiki.sqlite
+scraperwiki.sqlite-journal
 
 # Distribution / packaging
 .Python

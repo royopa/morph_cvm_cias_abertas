@@ -139,7 +139,7 @@ def processa_arquivo(file_path):
     df.to_sql(
         'swdata',
         sqlite_connection,
-        if_exists='append',
+        if_exists='replace',
         index=False
     )
 
